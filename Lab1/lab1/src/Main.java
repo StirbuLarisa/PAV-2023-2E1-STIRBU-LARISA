@@ -7,7 +7,6 @@ public class Main {
         int n = (int) (Math.random() * 1000000); // int uri generate pana la un milion
         int binaryNum = Integer.parseInt("10101", 2);
         int hexaNum = Integer.parseInt("FF", 16);
-        //n = (n * 3 + binaryNum + hexaNum) * 6;
 
         n *= 3;
         n += binaryNum;
