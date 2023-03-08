@@ -5,12 +5,27 @@ public class Main {
 
         Scanner keyboard = new Scanner(System.in);
         int n = 0;
-        try {
-            n = keyboard.nextInt();
-        } catch (Exception e) {
-            System.out.println("This is not a number");
-            return;
+
+        if (args.length<1){
+            try {
+                n = keyboard.nextInt();
+            } catch (Exception e) {
+                System.out.println("This is not a number");
+                return;
+            }
         }
+
+        else{
+            try {
+                n = Integer.parseInt(args[0]);
+            } catch (Exception ex) {
+                System.out.println("This is not a number");
+                return;
+            }
+
+        }
+
+
         int[][] matrix = new int[n][n];
         int i, j;
 
@@ -29,8 +44,7 @@ public class Main {
             System.out.println(time);
         } else {
             String matrix1 = "";
-            String matrix2 = "";;
-            System.out.println("Rows:");
+            String matrix2 = "";
 
             for (i = 0; i < n; i++) {
                 String col = "";
@@ -44,7 +58,10 @@ public class Main {
                 matrix2 = matrix2.concat(col + "\n");
 
             }
+            System.out.println("Rows:");
             System.out.println(matrix1);
+
+            System.out.println("Columns:");
             System.out.println(matrix2);
 
         }
