@@ -24,7 +24,11 @@ public class Game implements Serializable {
     }
 
     public Player switchPlayer() {
-        currentPlayer = currentPlayer == player1 ? player2 : player1;
+        if (currentPlayer == player1) {
+            currentPlayer = player2;
+        } else {
+            currentPlayer = player1;
+        }
         return currentPlayer;
     }
 
