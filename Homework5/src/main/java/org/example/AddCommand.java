@@ -10,8 +10,13 @@ public class AddCommand implements Command {
         String name = args[1];
         String path = args[2];
         Map<String, String> tags = new HashMap<>();
-        for (int i = 3; i <= args.length; i += 2) {
-            tags.put(args[i], args[i + 1]);
+        String tagString = args[3];
+        String[] tagPairs = tagString.split(",");
+        for (String tagPair : tagPairs) {
+            String[] parts = tagPair.split("=");
+            if (parts.length == 2) {
+                tags.put(parts[0], parts[1]);
+            }
         }
         catalog.addDocument(new Document(id, name, path, tags));
     }
