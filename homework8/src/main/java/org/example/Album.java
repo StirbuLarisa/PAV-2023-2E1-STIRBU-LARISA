@@ -57,4 +57,15 @@ public class Album {
     public void setGenreIds(List<Integer> genreIds) {
         this.genreIds = genreIds;
     }
+
+    @Override
+    public String toString() {
+        return "Album{" +
+                "id=" + id +
+                ", releaseYear=" + releaseYear +
+                ", title='" + title + '\'' +
+                ", artistId=" + artistId +
+                ", genreIds=" + genreIds +
+                '}';
+    }
 }

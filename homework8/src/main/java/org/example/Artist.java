@@ -16,4 +16,12 @@ public class Artist {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "Artist{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

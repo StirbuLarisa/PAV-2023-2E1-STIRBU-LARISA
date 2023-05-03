@@ -1,9 +1,9 @@
 package org.example;
 import com.opencsv.CSVReader;
-import java.io.BufferedReader;
+
 import java.io.FileReader;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+
 import java.sql.SQLException;
 import java.util.*;
 
@@ -24,7 +24,7 @@ public class DatasetImporter {
             AlbumDAO albumDAO = new AlbumDAO();
             GenreDAO genreDAO = new GenreDAO();
 
-            // read the CSV file and create objects
+            // read the CSV file
 
             List<Album> albums = new ArrayList<>();
             int id=1;
